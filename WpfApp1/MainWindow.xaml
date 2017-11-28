@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="413" Width="592">
+    <Window.Resources>
+        <Image x:Key="Object1" Source="/images/editor.png"/>
+        <Image x:Key="Object2" Source="/images/tools.png"/>
+    </Window.Resources>
     <Grid>
-        
+        <Frame Content="" HorizontalAlignment="Left" Height="297" VerticalAlignment="Top" Width="584" Name="navigator" Margin="0,85,0,0" />
+        <Button Content="{DynamicResource Object1}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="{DynamicResource Object2}" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="216,48,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+
     </Grid>
 </Window>

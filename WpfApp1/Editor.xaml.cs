@@ -16,28 +16,22 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Editor.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Editor : Page
     {
-        public MainWindow()
+        public Editor()
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            navigator.NavigationService.Navigate(new Uri("editor.xaml",UriKind.Relative));
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            navigator.NavigationService.Navigate(new Uri("save.xaml", UriKind.Relative));
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            navigator.NavigationService.Navigate(new Uri("home.xaml", UriKind.Relative));
+            List<MyTable> result = new List<MyTable>(Convert.ToInt32(N_box.Text));
+            for (int i = 1; i <=Convert.ToInt32(N_box.Text); i++)
+            {
+                result.Add(new MyTable(i, 0, 0, 0));
+            }
+            grid.ItemsSource = result;
         }
     }
 }
