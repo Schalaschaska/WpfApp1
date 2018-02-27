@@ -30,7 +30,6 @@ namespace WpfApp1
             List<double> Ki_list = new List<double>();
             List<double> Di_lis = new List<double>();
             List<double> Ri_list = new List<double>();
-
             List<MyTable> result = new List<MyTable>(Convert.ToInt32(N_box.Text));
             
             for (int i = 1; i <=Convert.ToInt32(N_box.Text); i++)
