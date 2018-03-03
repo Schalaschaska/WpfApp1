@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="413" Width="592">
+        Title="MainWindow" Height="413" Width="592" Background="#FFBBBABB">
     <Window.Resources>
         <Image x:Key="Object1" Source="/images/editor.png"/>
         <Image x:Key="Object2" Source="/images/tools.png"/>

@@ -32,7 +32,7 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            navigator.NavigationService.Navigate(new Uri("save.xaml", UriKind.Relative));
+            navigator.NavigationService.Navigate(new Uri("tools.xaml", UriKind.Relative));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
