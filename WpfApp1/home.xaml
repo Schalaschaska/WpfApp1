@@ -3,13 +3,24 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:oxy="http://oxyplot.org/wpf"
       xmlns:local="clr-namespace:WpfApp1"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="home">
-
+    <Page.DataContext>
+        <local:graf></local:graf>
+    </Page.DataContext>
     <Grid Background="#FFF3E5E5">
         <Label Content="Home" HorizontalAlignment="Left" Margin="70,97,0,0" VerticalAlignment="Top"/>
-
+        <oxy:Plot Title="{Binding Title}" Name="plot">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding Points}"/>
+            </oxy:Plot.Series>
+            <oxy:Plot.Axes>
+                <oxy:LinearAxis Position="Bottom" Minimum="0" Maximum="50" />
+                <oxy:LinearAxis Position="Left" Minimum="0" Maximum="15" />
+            </oxy:Plot.Axes>
+        </oxy:Plot>
     </Grid>
 </Page>

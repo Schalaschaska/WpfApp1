@@ -9,7 +9,7 @@ namespace WpfApp1
     class Calc
     {
         public double Rez(double[]RI,double[]YI,double[]VI,double[]QI)
-        {
+        {   
             return 0;
         }
     }
